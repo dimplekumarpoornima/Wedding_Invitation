@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4eee2">
+<title>Dimple Kumar & Poornima Reddy — Wedding Invitation</title>
+<style>
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: #f4eee2;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.invitation {
+  position: relative;
+  margin: 0 auto;
+  line-height: 0;
+}
+
+.invitation picture,
+.invitation img {
+  display: block;
+}
+
+.invitation img {
+  width: 100%;
+  height: auto;
+}
+
+.link {
+  position: absolute;
+  z-index: 10;
+  display: block;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 899px) {
+  .invitation {
+    width: 100vw;
+  }
+
+  /*
+    Mobile artwork is 940 x 1672.
+    The artwork itself contains the visible buttons.
+    These transparent areas make those buttons clickable.
+  */
+  .remind {
+    left: 17%;
+    top: 56.0%;
+    width: 66%;
+    height: 7.5%;
+  }
+
+  .directions {
+    left: 25%;
+    top: 75.0%;
+    width: 50%;
+    height: 7.0%;
+  }
+}
+
+/* =========================
+   DESKTOP / MONITOR
+   ========================= */
+@media (min-width: 900px) {
+  html, body {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Desktop artwork is 1024 x 1536 (2:3). */
+  .invitation {
+    height: 100dvh;
+    width: min(66.6667dvh, 100vw);
+    aspect-ratio: 2 / 3;
+    flex: 0 0 auto;
+  }
+
+  .invitation img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .remind {
+    left: 18%;
+    top: 62.5%;
+    width: 64%;
+    height: 8.5%;
+  }
+
+  .directions {
+    left: 25%;
+    top: 80.0%;
+    width: 50%;
+    height: 9.0%;
+  }
+}
+</style>
+</head>
+
+<body>
+  <main class="invitation">
+
+    <picture>
+      <source media="(max-width: 899px)" srcset="wedding-mobile.png">
+      <img src="wedding-desktop.png"
+           alt="Dimple Kumar and Poornima Reddy Wedding Invitation">
+    </picture>
+
+    <a class="link remind"
+       href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+Reminder+-+Dimple+Kumar+%26+Poornima+Reddy&dates=20261029T110000%2F20261029T111500&details=Reminder%3A+Please+remember+the+wedding+celebration+on+Thursday%2C+29+October+2026.%0AReception+%26+Dinner%3A+7%3A00+PM+onwards.%0AWedding%3A+Friday%2C+30+October+2026+from+7%3A00+AM+to+8%3A00+AM.%0APushkarakalam%3A+7%3A49+AM.%0A%0AVenue%3A+R.P.R.+Convention+Centre%2C+Opp.+H.P.+Petrol+Bunk%2C+Thukivakam%2C+150+Bypass+Road%2C+Tirupati+Rural.&location=R.P.R.+Convention+Centre%2C+Opp.+H.P.+Petrol+Bunk%2C+Thukivakam%2C+150+Bypass+Road%2C+Tirupati+Rural&ctz=Asia%2FKolkata"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Remind me and add the wedding to calendar"></a>
+
+    <a class="link directions"
+       href="https://share.google/z0rKY6E8mGrfZU7jh"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Get directions to the wedding venue"></a>
+
+  </main>
+</body>
+</html>
